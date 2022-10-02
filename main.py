@@ -43,8 +43,9 @@ def turtle_race(move_em):
 # timeline
 
 print("Welcome to the turtle races!!")
-amount_turtles = int(input("How many turtles in the race?: whole numbers only"))
-who_will_win = int(input("Which turtle # do you think will win?: "))
+amount_turtles = int(screen.numinput("amount of turtles", "How many turtles would you want in the race?", 5, minval=2,
+                                     maxval=30))
+who_will_win = int(screen.numinput("who will win", "Which turtle do you think will win?", 5))
 
 turtle_list = create_turtles(amount_turtles)
 screen.setup(width=400, height=((amount_turtles * 20) + 20), startx=0, starty=0)
